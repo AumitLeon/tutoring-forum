@@ -18,7 +18,7 @@ const NaviBar = () => (
 
 
 <nav role="navigation">
-    <h3 className="siteName">COURSIFY</h3>
+    <h3 className="siteName">COURSIFY &beta;</h3>
   <div id="menuToggle">
 
     <input type="checkbox" />
