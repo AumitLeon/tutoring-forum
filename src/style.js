@@ -1,3 +1,4 @@
+//Inline styles
 //style.js
 
 const style = {
