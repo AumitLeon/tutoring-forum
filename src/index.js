@@ -9,11 +9,9 @@ import Section from './bgimage';
 
 
 ReactDOM.render(
-  <div className="lol">
+  <div>
   <Section/>
-  <CommentBox
-    url='http://localhost:3001/api/comments'
-    pollInterval={2000} />
-    </div>,
+    
+  </div>,
   document.getElementById('root')
 );

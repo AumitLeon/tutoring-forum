@@ -11,6 +11,8 @@ import {
   Link
 } from 'react-router-dom'
 import headerimage from './headerimg.js'
+import formInstace from './form.js'
+import Section from './bgimage';
 
 const NaviBar = () => (
     <Router>
@@ -30,7 +32,7 @@ const NaviBar = () => (
    
     <ul id="menu">
       <a href="#"><li><Link to="/">Home</Link></li></a>
-      <a href="#"><li><Link to="/about">About</Link></li></a>
+      <a href="#"><li><Link to="/computerscience">ComputerScience</Link></li></a>
       <a href="#"><li>Info</li></a>
       <a href="#"><li>Contact</li></a>
       <a href="https://erikterwan.com/" target="_blank"><li>Show me more</li></a>
@@ -44,26 +46,26 @@ const NaviBar = () => (
 
   
   <Route exact path="/" component={Home}/>
-      <Route path="/about" component={About}/>
+      <Route path="/computerscience" component={ComputerScience}/>
       <Route path="/topics" component={Topics}/>
 </nav>
+
 </Router>
+
   
 )
 
 const Home = () => (
-  <div>
-    <h2>Home</h2>
+   <div>
   </div>
 )
 
-const About = () => (
-  <div>
-      <div style ={ style.commentHeader }>
-  </div>
+const ComputerScience = () => (
+  
+  <div className="bufferTop">
     <CommentBox
-    url='http://localhost:3001/api/comments'
-    pollInterval={2000} />
+      url='http://localhost:3001/api/comments'
+      pollInterval={2000} />
   </div>
 )
 

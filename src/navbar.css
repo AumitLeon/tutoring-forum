@@ -12,12 +12,15 @@
     left:0px;
     
 }
-
+.bufferTop {
+  padding-top: 500px;
+}
 .titles {
   text-align: center;
   position: relative;
   float: left;
-  top: 73%;
+  padding-top:0px;
+  top: 92%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: 'Quicksand', sans-serif;
@@ -68,7 +71,7 @@
   width: 300px;
   margin: -115px 0 0 50px;
 
-  padding-top: 125px;
+  padding-top: 140px;
   font-family: 'Quicksand', sans-serif;
   color: white;
 }
