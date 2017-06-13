@@ -11,8 +11,24 @@ import {
   Link
 } from 'react-router-dom'
 import headerimage from './headerimg.js'
-import formInstace from './form.js'
+import FormInst from './form.js'
 import Section from './bgimage';
+
+
+import { FormGroup,
+        ControlLabel,
+        HelpBlock,
+        Checkbox,
+        Radio,
+        FormControl,
+        Button,
+        mountNode
+ } from 'react-bootstrap';
+ import Quests from './displayQuestions'
+
+
+
+
 
 const NaviBar = () => (
     <Router>
@@ -57,15 +73,20 @@ const NaviBar = () => (
 
 const Home = () => (
    <div>
+     <div className="bufferTop">
+       <CommentBox
+        url='http://localhost:3001/api/comments'
+        pollInterval={2000} />
+      </div>
+
   </div>
 )
 
 const ComputerScience = () => (
   
   <div className="bufferTop">
-    <CommentBox
-      url='http://localhost:3001/api/comments'
-      pollInterval={2000} />
+   <Quests/> 
+   <FormInst/>
   </div>
 )
 

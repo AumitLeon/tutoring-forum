@@ -11,7 +11,6 @@ import Section from './bgimage';
 ReactDOM.render(
   <div>
   <Section/>
-    
   </div>,
   document.getElementById('root')
 );

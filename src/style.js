@@ -85,6 +85,20 @@ const style = {
     paddingRight:'15px',
     fontSize:'.7rem',
     color:'red'
+  },
+  formStyle: {
+    marginTop: '2%',
+    marginBottom: '10%',
+    marginRight: '15%',
+    marginLeft: '15%',
+    fontFamily: '"Bitter", serif',
+  },
+  questStyle: {
+    marginTop: '2%',
+    marginBottom: '2%',
+    marginRight: '15%',
+    marginLeft: '15%',
+    fontFamily: '"Bitter", serif',
   }
 }
   
