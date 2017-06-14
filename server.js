@@ -7,6 +7,7 @@ var express = require('express');
 var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 var Comment = require('./model/comments');
+var Forum = require('./model/forum');
 //and create our instances
 var app = express();
 var router = express.Router();
@@ -91,6 +92,68 @@ router.route('/comments')
      if (err)
        res.send(err);
      res.json({ message: 'Comment has been deleted' })
+   })
+ });
+
+
+
+ /**Setting up api for forum functions**/
+
+
+
+ //adding the /forum route to our /api router
+router.route('/forum')
+  //retrieve all comments from the database
+  .get(function(req, res) {
+    //looks at our Comment Schema
+    Forum.find(function(err, forums) {
+      if (err)
+        res.send(err);
+      //responds with a json object of our database comments.
+      res.json(forums)
+    });
+  })
+  //post new comment to the database
+  .post(function(req, res) {
+    var forum = new Forum();
+    //body parser lets us use the req.body
+    forum.author = req.body.author;
+    forum.message = req.body.message;
+    forum.email = req.body.email;
+
+    forum.save(function(err) {
+      if (err)
+        res.send(err);
+      res.json({ message: 'Post successfully added!' });
+    });
+  });
+
+  router.route('/forum/:forum_id')
+//The put method gives us the chance to update our comment based on the ID passed to the route
+ .put(function(req, res) {
+   Forum.findById(req.params.forum_id, function(err, forum) {
+     if (err)
+       res.send(err);
+     //setting the new author and text to whatever was changed. If nothing was changed
+     // we will not alter the field.
+     (req.body.author) ? forum.author = req.body.author : null;
+     (req.body.message) ? forum.message = req.body.message : null;
+     (req.body.email) ? forum.email = req.body.email : null;
+     //save comment
+     forum.save(function(err) {
+       if (err)
+         res.send(err);
+       res.json({ message: 'Forum has been updated' });
+     });
+   });
+ })
+ //delete method for removing a comment from our database
+ .delete(function(req, res) {
+   //selects the comment by its ID, then removes it.
+   Forum.remove({ _id: req.params.forum_id }, function(err, forum) {
+     if (err)
+       res.send(err);
+     res.json({ message: 'Post has been deleted' })
    })
  });
 

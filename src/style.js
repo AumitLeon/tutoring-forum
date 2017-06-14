@@ -99,7 +99,16 @@ const style = {
     marginRight: '15%',
     marginLeft: '15%',
     fontFamily: '"Bitter", serif',
-  }
+  },
+  updatePostLink: {
+    textDecoration:'none',
+    paddingRight:'15px',
+  },
+  deletePostLink: {
+    textDecoration:'none',
+    paddingRight:'15px',
+    color:'red'
+  },
 }
   
 

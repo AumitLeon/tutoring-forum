@@ -13,6 +13,7 @@ import {
 import headerimage from './headerimg.js'
 import FormInst from './form.js'
 import Section from './bgimage';
+import PostForm from './postform'
 
 
 import { FormGroup,
@@ -86,7 +87,8 @@ const ComputerScience = () => (
   
   <div className="bufferTop">
    <Quests/> 
-   <FormInst/>
+
+   <PostForm/>
   </div>
 )
 
