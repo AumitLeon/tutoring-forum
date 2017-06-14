@@ -30,7 +30,6 @@ import { FormGroup,
 
 
 
-
 const NaviBar = () => (
     <Router>
       
@@ -76,7 +75,7 @@ const Home = () => (
    <div>
      <div className="bufferTop">
        <CommentBox
-        url='http://tutoring-forum.herokuapp.com:50484/api/comments'
+        url='http://localhost:3001/api/comments'
         pollInterval={2000} />
       </div>
 
