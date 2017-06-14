@@ -7,7 +7,9 @@ import {
     FormGroup,
     FormControl,
     ControlLabel,
-    HelpBlock
+    HelpBlock,
+    OverlayTrigger,
+    Tooltip
  } from 'react-bootstrap';
 
 
@@ -20,6 +22,12 @@ function FieldGroup({ id, label, help, ...props }) {
     </FormGroup>
   );
 }
+
+
+const tooltip = (
+  <Tooltip id="tooltip"><strong>Enter a valid email address</strong> i.e, jdoe@middlebury.edu</Tooltip>
+);
+
 
 class PostForm extends Component {
   constructor(props) {
@@ -63,6 +71,9 @@ class PostForm extends Component {
                 value = {this.state.author}
                 onChange={this.handleAuthorChange}
             />
+            <OverlayTrigger placement="left" overlay={tooltip}>
+
+    
             <FieldGroup
                 id="formControlsText"
                 type="text"
@@ -71,6 +82,7 @@ class PostForm extends Component {
                 value = {this.state.email}
                 onChange={this.handleEmailChange}
             />     
+            </OverlayTrigger>
             <FormGroup controlId="formControlsTextarea">
                 <ControlLabel>Enter Your Message</ControlLabel>
                 <FormControl componentClass="textarea" type='text' value={this.state.message} onChange={this.handleMessageChange} placeholder="Enter your message" />
