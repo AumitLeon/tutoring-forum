@@ -71,7 +71,7 @@ class PostForm extends Component {
                 value = {this.state.author}
                 onChange={this.handleAuthorChange}
             />
-            <OverlayTrigger placement="left" overlay={tooltip}>
+            <OverlayTrigger placement="bottom" overlay={tooltip}>
 
     
             <FieldGroup

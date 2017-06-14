@@ -5,7 +5,19 @@ import PostList from './postlist';
 import CommentForm from './commentform';
 import style from './style';
 import Section from './bgimage';
+import PostForm from './postform'
+import { 
+    Panel,
+    Button,
+    FormGroup,
+    FormControl,
+    ControlLabel,
+    HelpBlock
+ } from 'react-bootstrap';
 
+const title = (
+    <h3>Questions and Answers</h3>
+);
 
 class ForumBox extends Component {
   constructor(props) {
@@ -56,12 +68,13 @@ class ForumBox extends Component {
   render() {
     return (
       <div>
-        <h2>Posts:</h2>
+        <Panel header={title} bsStyle="success" style={ style.questStyle }>      
       <PostList
         onPostDelete={ this.handlePostDelete }
         onPostUpdate={ this.handlePostUpdate }
         data={ this.state.data }/>
-        
+        </Panel>
+        <PostForm onPostSubmit={ this.handlePostSubmit }/>
       </div>
     )
   }

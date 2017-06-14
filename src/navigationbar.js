@@ -88,7 +88,7 @@ const ComputerScience = () => (
   <div className="bufferTop">
    <Quests/> 
 
-   <PostForm/>
+ 
   </div>
 )
 

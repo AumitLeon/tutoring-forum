@@ -125,13 +125,9 @@ const title = (
 class Quests extends Component {
   render() {
     return (
-    <Panel header={title} bsStyle="success" style={ style.questStyle }>
       <ForumBox
         url='http://localhost:3001/api/forum'
         pollInterval={2000} />
-      questions will go here
-    </Panel>
-    
     )
   }
 }
