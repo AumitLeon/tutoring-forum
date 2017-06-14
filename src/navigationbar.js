@@ -78,7 +78,7 @@ const Home = () => (
    <div>
      <div className="bufferTop">
        <CommentBox
-        url = 'http://localhost:3001/api/comments'
+        url = 'http://tutoring-forum.herokuapp.com/api/comments'
         pollInterval={2000} />
       </div>
 
