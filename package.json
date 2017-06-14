@@ -2,7 +2,8 @@
   "name": "tutoringforum",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
+  "proxy": "http://localhost:3001/",
+    "dependencies": {
     "axios": "^0.16.2",
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
