@@ -49,9 +49,9 @@ const NaviBar = () => (
    
     <ul id="menu">
       <a href="#"><li><Link to="/">Home</Link></li></a>
-      <a href="#"><li><Link to="/computerscience">ComputerScience</Link></li></a>
-      <a href="#"><li>Info</li></a>
-      <a href="#"><li>Contact</li></a>
+      <a href="#"><li><Link to="/computerscience">Computer Science</Link></li></a>
+      <a href="http://aumitleon.com/" target="_blank"><li>Portfolio</li></a>
+      <a href="https://github.com/AumitLeon/tutoring-forum" target="_blank"><li>Code</li></a>
       <a href="https://erikterwan.com/" target="_blank"><li>Show me more</li></a>
     </ul>
   </div>
