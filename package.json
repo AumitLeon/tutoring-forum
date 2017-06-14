@@ -24,7 +24,7 @@
     "webpack-dev-server": "~2.4.5"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node server.js",
     "start-dev": "nf start -p 3000",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
