@@ -162,6 +162,7 @@ router.route('/forum')
 //Use our router configuration when we call /api
 app.use('/api', router);
 
+
 //starts the server and listens for requests
 app.listen(port, function() {
   console.log(`api running on port ${port}`);

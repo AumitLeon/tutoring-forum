@@ -126,7 +126,7 @@ class Quests extends Component {
   render() {
     return (
       <ForumBox
-        url='http://localhost:3001/api/forum'
+        url='http://forum-api-leon.herokuapp.com/api/forum'
         pollInterval={2000} />
     )
   }

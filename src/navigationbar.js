@@ -67,8 +67,6 @@ const NaviBar = () => (
 </nav>
 
 </Router>
-
-  
 )
 
 var urlhaha = window.location.href;
@@ -78,7 +76,7 @@ const Home = () => (
    <div>
      <div className="bufferTop">
        <CommentBox
-        url = 'http://tutoring-forum.herokuapp.com/api/comments'
+        url = 'http://forum-api-leon.herokuapp.com/api/comments'
         pollInterval={2000} />
       </div>
 
