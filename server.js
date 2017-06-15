@@ -1,4 +1,7 @@
 //server.js
+/*Have to serve this from a seperate heroku app. Url for api:
+forum-api-leon.herokuapp.com/api/comments
+forum-api-leon.herokuapp.com/api/forum */
 'use strict'
 
 //first we import our dependencies...
@@ -14,6 +17,9 @@ var router = express.Router();
 
 //set our port to either a predetermined port number if you have set it up, or 3001
 var port = process.env.API_PORT || 3001;
+
+//for production use the below
+//var port = process.env.PORT;
 
 
 
@@ -168,3 +174,8 @@ app.listen(port, function() {
   console.log(`api running on port ${port}`);
 });
 
+//for Prod, use the below
+/*app.listen(process.env.PORT, function() {
+  console.log(`api running on port ${port}`);
+});
+*/

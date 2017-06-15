@@ -1,3 +1,9 @@
+This project can be reached at http://tutoring-forum.herokuapp.com/.
+
+Heroku dynos only let you provide one port to the outside world. (https://github.com/facebookincubator/create-react-app/issues/639) Thus, the app has a second heroku app which serves as the public restful api for our primary app. 
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
