@@ -88,17 +88,30 @@ const style = {
   },
   formStyle: {
     marginTop: '2%',
-    marginBottom: '10%',
-    marginRight: '15%',
-    marginLeft: '15%',
+   // marginBottom: '10%',
+    //marginRight: '15%',
+    //marginLeft: '15%',
     fontFamily: '"Bitter", serif',
+  },
+  frontPage: {
+    fontFamily: '"Bitter", serif',
+    fontSize: '50px'
   },
   questStyle: {
     marginTop: '2%',
-    marginBottom: '2%',
-    marginRight: '15%',
-    marginLeft: '15%',
+   // marginBottom: '2%',
+    //marginRight: '15%',
+    //marginLeft: '15%',
     fontFamily: '"Bitter", serif',
+  },
+  footStyle: {
+    marginTop: '2%',
+   // marginBottom: '2%',
+    //marginRight: '15%',
+    //marginLeft: '15%',
+    fontFamily: '"Bitter", serif',
+    fontSize: "15px",
+    textAlign: "center"
   },
   updatePostLink: {
     textDecoration:'none',

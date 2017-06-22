@@ -12,7 +12,10 @@ import {
     FormGroup,
     FormControl,
     ControlLabel,
-    HelpBlock
+    HelpBlock,
+    Grid,
+    Row,
+    Col
  } from 'react-bootstrap';
 
 const title = (
@@ -68,13 +71,21 @@ class ForumBox extends Component {
   render() {
     return (
       <div>
-        <Panel header={title} bsStyle="success" style={ style.questStyle }>      
-      <PostList
-        onPostDelete={ this.handlePostDelete }
-        onPostUpdate={ this.handlePostUpdate }
-        data={ this.state.data }/>
-        </Panel>
-        <PostForm onPostSubmit={ this.handlePostSubmit }/>
+        <Grid>
+          <Row className="show-grid">
+            <Col md={7} md={7}>
+              <Panel header={title} bsStyle="success" style={ style.questStyle }>      
+                <PostList
+                  onPostDelete={ this.handlePostDelete }
+                  onPostUpdate={ this.handlePostUpdate }
+                  data={ this.state.data }/>
+              </Panel>
+            </Col>
+            <Col md={5} md={5}>
+              <PostForm onPostSubmit={ this.handlePostSubmit }/>
+            </Col>
+          </Row>
+        </Grid>
       </div>
     )
   }

@@ -23,7 +23,14 @@ import { FormGroup,
         Radio,
         FormControl,
         Button,
-        mountNode
+        mountNode,
+        Grid,
+        Row,
+        Col,
+        Panel,
+        List,
+        ListGroupItem,
+        ListGroup
  } from 'react-bootstrap';
  import Quests from './displayQuestions'
 
@@ -51,7 +58,7 @@ const NaviBar = () => (
       <a href="#"><li><Link to="/computerscience">Computer Science</Link></li></a>
       <a href="http://aumitleon.com/" target="_blank"><li>Portfolio</li></a>
       <a href="https://github.com/AumitLeon/tutoring-forum" target="_blank"><li>Code</li></a>
-      <a href="https://erikterwan.com/" target="_blank"><li>Show me more</li></a>
+      <a href="#"><li><Link to="/issues">Submit an issue</Link></li></a>
     </ul>
   </div>
 
@@ -62,8 +69,9 @@ const NaviBar = () => (
 
   
   <Route exact path="/" component={Home}/>
-      <Route path="/computerscience" component={ComputerScience}/>
-      <Route path="/topics" component={Topics}/>
+  <Route path="/computerscience" component={ComputerScience}/>
+  <Route path="/issues" component={Issues}/>
+  <Route path="/topics" component={Topics}/>
 </nav>
 
 </Router>
@@ -75,9 +83,39 @@ urlhaha += 'api/comments'
 const Home = () => (
    <div>
      <div className="bufferTop">
+       <Grid>
+         <Row className="show-grid">
+         <Col xs={12} md={12}>
+          <Panel style={ style.questStyle }>
+            <h1>Welcome!</h1>
+            <p>Welcome to Coursify -- a tutoring solution that will reduce redundancy, and make tutoring more efficient.</p>
+              <ListGroup>
+                <ListGroupItem header="Computer Science Forum" href="#"><Link to="/computerscience">CS0101, CS0150, CS0190, CS200, CS201, CS202</Link></ListGroupItem>
+                <ListGroupItem header="Other Departments" bsStyle="danger">More courses coming soon!</ListGroupItem>
+              </ListGroup>
+          </Panel>
+
+           <Panel style={ style.questStyle }>
+            <h3>FAQ</h3>
+            <ListGroup>
+                <ListGroupItem header="Common questions" bsStyle="danger">Coming soon!</ListGroupItem>
+            </ListGroup>
+          </Panel>
+        </Col>
+       </Row>
+      </Grid>
        <CommentBox
         url = 'http://forum-api-leon.herokuapp.com/api/comments'
         pollInterval={2000} />
+        <Grid>
+          <Row className="show-grid">
+            <Col xs={12} md={12}>
+            <hr/>
+            <p style={ style.footStyle }>&#9874; Built by Aumit Leon<br/>&copy; 2017</p>
+            </Col>
+          </Row>
+          </Grid>
+    
       </div>
 
   </div>
@@ -87,8 +125,37 @@ const ComputerScience = () => (
   
   <div className="bufferTop">
    <Quests/> 
+   <Grid>
+   <Row className="show-grid">
+            <Col xs={12} md={12}>
+            <hr/>
+            <p style={ style.footStyle }>&#9874; Built by Aumit Leon<br/>&copy; 2017</p>
+            </Col>
+    </Row>
+    </Grid>
 
  
+  </div>
+)
+
+const Issues = () => (
+  <div>
+     <div className="bufferTop">
+       <h1> hola </h1>
+       <CommentBox
+        url = 'http://forum-api-leon.herokuapp.com/api/comments'
+        pollInterval={2000} />
+        <Grid>
+          <Row className="show-grid">
+            <Col xs={12} md={12}>
+            <hr/>
+            <p style={ style.footStyle }>&#9874; Built by Aumit Leon<br/>&copy; 2017</p>
+            </Col>
+          </Row>
+        </Grid>
+    
+      </div>
+
   </div>
 )
 
