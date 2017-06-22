@@ -30,7 +30,8 @@ import { FormGroup,
         Panel,
         List,
         ListGroupItem,
-        ListGroup
+        ListGroup,
+        Accordion
  } from 'react-bootstrap';
  import Quests from './displayQuestions'
 
@@ -88,25 +89,29 @@ const Home = () => (
          <Col xs={12} md={12}>
           <Panel style={ style.questStyle }>
             <h1>Welcome!</h1>
-            <p>Welcome to Coursify -- a tutoring solution that will reduce redundancy, and make tutoring more efficient.</p>
+            <p>Welcome to Coursify -- a tutoring solution that will reduce redundancy, and make tutoring more efficient.<hr/></p>
               <ListGroup>
                 <ListGroupItem header="Computer Science Forum" href="#"><Link to="/computerscience">CS0101, CS0150, CS0190, CS200, CS201, CS202</Link></ListGroupItem>
                 <ListGroupItem header="Other Departments" bsStyle="danger">More courses coming soon!</ListGroupItem>
               </ListGroup>
           </Panel>
+          <Accordion>
+              <Panel header="Updates" eventKey="1" style={style.questStyle} bsStyle="danger">
+                <b><i>This is currently a work in progress build. Check back for updates!</i></b>
+                <ListGroup fill>
+                  <ListGroupItem>6/22/17 -- UI updates: forum section allows cleaner division between components, especially useful for mobile users. Front page has been updated to reflect status of the site. You can submit a public issue <a href="#"><Link to="/issues">here</Link></a>.</ListGroupItem>
+                </ListGroup>
+                </Panel>
 
-           <Panel style={ style.questStyle }>
-            <h3>FAQ</h3>
-            <ListGroup>
-                <ListGroupItem header="Common questions" bsStyle="danger">Coming soon!</ListGroupItem>
-            </ListGroup>
-          </Panel>
+              <Panel header="Frequently Asked Questions" eventKey="2" style={style.questStyle} bsStyle="info">
+                <ListGroup>
+                  <ListGroupItem header="Common questions" bsStyle="danger">Coming soon!</ListGroupItem>
+                </ListGroup>
+              </Panel>
+            </Accordion>
         </Col>
        </Row>
       </Grid>
-       <CommentBox
-        url = 'http://forum-api-leon.herokuapp.com/api/comments'
-        pollInterval={2000} />
         <Grid>
           <Row className="show-grid">
             <Col xs={12} md={12}>
@@ -141,7 +146,6 @@ const ComputerScience = () => (
 const Issues = () => (
   <div>
      <div className="bufferTop">
-       <h1> hola </h1>
        <CommentBox
         url = 'http://forum-api-leon.herokuapp.com/api/comments'
         pollInterval={2000} />
