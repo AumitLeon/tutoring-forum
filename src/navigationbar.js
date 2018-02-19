@@ -97,14 +97,21 @@ const Home = () => (
               </ListGroup>
           </Panel>
           <Accordion>
-              <Panel header="Updates" eventKey="1" style={style.questStyle} bsStyle="danger">
+
+   
+
+
+
+
+
+              <Panel header="Updates" style={style.questStyle} bsStyle="danger">
                 <b><i>This is currently a work in progress build. Check back for updates!</i></b>
                 <ListGroup fill>
                   <ListGroupItem>6/22/17 -- UI updates: forum section allows cleaner division between components, especially useful for mobile users. Front page has been updated to reflect status of the site. You can submit a public issue <a href="#"><Link to="/issues">here</Link></a>.</ListGroupItem>
                 </ListGroup>
                 </Panel>
 
-              <Panel header="Frequently Asked Questions" eventKey="2" style={style.questStyle} bsStyle="info">
+              <Panel header="Frequently Asked Questions" style={style.questStyle} bsStyle="info">
                 <ListGroup>
                   <ListGroupItem header="Common questions" bsStyle="danger">Coming soon!</ListGroupItem>
                 </ListGroup>
