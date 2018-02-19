@@ -14,6 +14,7 @@ import headerimage from './headerimg.js'
 import FormInst from './form.js'
 import Section from './bgimage';
 import PostForm from './postform'
+import Editor from './richtext'
 
 
 import { FormGroup,
